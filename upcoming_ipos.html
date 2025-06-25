@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Upcoming IPOs{% endblock %}
+
+{% block content %}
+<h2>Upcoming IPO</h2>
+<p>Companies that have filed for an IPO with SEBI. Few details might be disclosed later.</p>
+
+<div class="ipo-container">
+    {% for ipo in ipos %}
+    <div class="ipo-card">
+        <img src="{{ ipo.logo.url }}" class="ipo-logo" alt="{{ ipo.company_name }}">
+        <h3>{{ ipo.company_name }}</h3>
+        <ul>
+            <li><strong>PRICE BAND:</strong> {{ ipo.price_band }}</li>
+            <li><strong>OPEN:</strong> {{ ipo.open_date|default:"Not Issued" }}</li>
+            <li><strong>CLOSE:</strong> {{ ipo.close_date|default:"Not Issued" }}</li>
+            <li><strong>ISSUE SIZE:</strong> {{ ipo.issue_size }}</li>
+            <li><strong>ISSUE TYPE:</strong> {{ ipo.issue_type }}</li>
+            <li><strong>LISTING DATE:</strong> {{ ipo.listing_date|default:"Not Issued" }}</li>
+        </ul>
+        <div class="ipo-buttons">
+            {% if ipo.has_rhp %}
+            <button class="rhp-btn">RHP</button>
+            {% endif %}
+            {% if ipo.has_drhp %}
+            <button class="drhp-btn">DRHP</button>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
