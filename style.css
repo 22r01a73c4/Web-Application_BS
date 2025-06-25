@@ -1,0 +1,68 @@
+/* static/css/style.css */    
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;     #giving information about the font size. 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;                  #givivng information about hte navabar.
+    padding: 10px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;           #describing the logs.
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links .new-badge {
+    background-color: #2962ff;
+    color: white;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.auth-buttons {
+    display: flex;              #telling about the buttons.
+    align-items: center;
+}
+
+.auth-buttons .sign-in {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.auth-buttons .sign-up {
+    background-color: #2962ff;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.menu-icon {
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
