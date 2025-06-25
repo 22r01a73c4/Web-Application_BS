@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}IPO FAQs{% endblock %}
+
+{% block content %}
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <p>Find answers to common questions that come in your mind related to IPO.</p>
+
+  <div class="faq-item">
+    <button class="faq-question">How to Subscribe to an IPO?</button>
+    <div class="faq-answer">
+      <ul>
+        <li>Step 1: Login to your respective service provider.</li>
+        <li>Step 2: Click on the IPO button.</li>
+        <li>Step 3: Select the IPO you want to bid and enter the relevant details.</li>
+        <li>Step 4: Subscription completes once you pay or give permission.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Should I buy an IPO first day?</button>
+    <div class="faq-answer">
+      <p>It depends on the company fundamentals and market sentiment. Research first.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How do you know if an IPO is good?</button>
+    <div class="faq-answer">
+      <p>Look for strong financials, company reputation, and peer comparison.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How to check IPO start date?</button>
+    <div class="faq-answer">
+      <p>You can check the IPO calendar section on the website or SEBI's official page.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is issue size?</button>
+    <div class="faq-answer">
+      <p>Issue size refers to the total value of shares offered in the IPO.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach(btn => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const answer = this.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+  });
+</script>
+{% endblock %}
