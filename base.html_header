@@ -1,0 +1,39 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bluestock{% endblock %}</title>    #describing the  company title
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Logo">  #giving image
+        <span>BLUESTOCK</span>
+    </div>
+    <nav class="nav-links">
+        <a href="#">IPO</a>    #giving information about options
+        <a href="#">COMMUNITY</a>
+        <div class="dropdown">
+            <a href="#">PRODUCTS ▼</a>
+        </div>
+        <div class="dropdown">
+            <a href="#">BROKERS ▼</a>
+        </div>
+        <a href="#">LIVE NEWS <span class="new-badge">NEW</span></a>
+    </nav>
+    <div class="auth-buttons">    #describing the buttons to login
+        <a href="#" class="sign-in">Sign In</a>
+        <a href="#" class="sign-up">Sign Up Now</a>
+        <div class="menu-icon">☰</div>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>
