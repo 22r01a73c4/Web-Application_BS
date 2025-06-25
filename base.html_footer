@@ -1,0 +1,83 @@
+<footer class="site-footer">
+  <div class="footer-sections">
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li>Trading View</li>
+        <li>NSE Holidays</li>
+        <li>e-Voting CDSL</li>
+        <li>e-Voting NSDL</li>
+        <li>Market Timings</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li>Careers</li>
+        <li>Contact Us</li>
+        <li>About Us</li>
+        <li>Community</li>
+        <li>Blogs</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Offerings</h4>
+      <ul>
+        <li>Compare Broker</li>
+        <li>Fin Calculators</li>
+        <li>IPO</li>
+        <li>All Brokers</li>
+        <li>Products</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li>Short Investor</li>
+        <li>Mutual Funds</li>
+        <li>Sitemap</li>
+        <li>Indian Indices</li>
+        <li>Bug Bounty Program</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Policy</h4>
+      <ul>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+        <li>Refund Policy</li>
+        <li>Disclaimer</li>
+        <li>Trust & Security</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <div class="footer-left">
+      <div class="social-icons">
+        <img src="{% static 'images/x-icon.png' %}" alt="X">
+        <img src="{% static 'images/fb-icon.png' %}" alt="Facebook">
+        <img src="{% static 'images/yt-icon.png' %}" alt="YouTube">
+        <img src="{% static 'images/linkedin-icon.png' %}" alt="LinkedIn">
+        <img src="{% static 'images/insta-icon.png' %}" alt="Instagram">
+        <img src="{% static 'images/telegram-icon.png' %}" alt="Telegram">
+      </div>
+      <div class="footer-brand">
+        <img src="{% static 'images/logo.png' %}" alt="Bluestock Logo">
+        <p><strong>Bluestock</strong> Fintech<br>Pune, Maharashtra</p>
+        <p>MSME Registration No: UDYAM-MH-01-vD138001</p>
+        <p class="startup">#startupindia</p>
+      </div>
+    </div>
+    <div class="footer-center">
+      <p>Investment in securities markets are subject to market risks, read all the related documents carefully before investing as prescribed by SEBI.</p>
+      <p>Users can write to <a href="mailto:hello@bluestock.in">hello@bluestock.in</a> or <a href="mailto:ceo@bluestock.in">ceo@bluestock.in</a> for queries.</p>
+      <p class="disclaimer">Disclaimer: We are not a SEBI-registered analyst. All data shown are for educational purposes only. Consult a financial advisor before investing.</p>
+    </div>
+    <div class="footer-right">
+      <p>Made with ❤️ in Pune, Maharashtra</p>
+    </div>
+  </div>
+</footer>
