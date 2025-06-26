@@ -1,0 +1,32 @@
+.reset-container {
+  width: 350px;
+  margin: 80px auto;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.reset-container p {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.btn-reset {
+  width: 100%;
+  background-color: #2962ff;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.back-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
