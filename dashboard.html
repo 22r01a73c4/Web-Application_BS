@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bluestock Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="sidebar">
+    <h2>Bluestock Fintech</h2>
+    <ul>
+        <li>Dashboard</li>
+        <li>Manage IPO</li>
+        <li>IPO Subscription</li>
+        <li>IPO Allotment</li>
+        <li>Settings</li>
+        <li>API Manager</li>
+        <li>Accounts</li>
+        <li>Help</li>
+    </ul>
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <p>Hi, {{ user }}</p>
+    </div>
+
+    <h1>Dashboard</h1>
+    <div class="stats">
+        <div class="card orange">Total IPO: {{ ipo_stats.total }}</div>
+        <div class="card blue">IPO in Gain: {{ ipo_stats.gain }}</div>
+        <div class="card red">IPO in Loss: {{ ipo_stats.loss }}</div>
+    </div>
+
+    <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+            {% for link in quick_links %}
+                <li>{{ link.name }} - <a href="{{ link.url }}">Visit Now</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="chart">
+        <h3>Main Board IPO</h3>
+        <ul>
+            <li>Upcoming: {{ main_board_ipo.upcoming }}</li>
+            <li>New Listed: {{ main_board_ipo.new_listed }}</li>
+            <li>Ongoing: {{ main_board_ipo.ongoing }}</li>
+        </ul>
+        <p>(Chart will go here)</p>
+    </div>
+</div>
+</body>
+</html>
