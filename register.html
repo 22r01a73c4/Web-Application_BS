@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="register-container">
+  <img src="{% static 'images/logo.png' %}" class="logo" alt="Bluestock">
+
+  <h2>Create an account</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <label>Name</label>
+    {{ form.full_name }}
+
+    <label>Email Address</label>
+    {{ form.email }}
+
+    <label>Password</label>
+    {{ form.password1 }}
+
+    <label>Confirm Password</label>
+    {{ form.password2 }}
+
+    <p class="tos">
+      By continuing, you agree to our <a href="#">terms of service</a>.
+    </p>
+
+    <!-- reCAPTCHA widget placeholder -->
+    <div class="captcha">
+      <input type="checkbox" required> I'm not a robot
+    </div>
+
+    <button type="submit" class="btn-signup">Sign up</button>
+
+    <div class="or-divider">or sign up with</div>
+
+    <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn-google">
+      <img src="https://www.svgrepo.com/show/355037/google.svg" width="20"> Continue with Google
+    </a>
+
+    <p class="login-link">
+      Already have an account? <a href="{% url 'login' %}">Sign in here</a>
+    </p>
+  </form>
+</div>
+</body>
+</html>
